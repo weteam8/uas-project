@@ -1,0 +1,111 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0e0e14;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: #ff3d47;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.icon-location img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+select {
+  background-color: #1e1e2e;
+  border: 1px solid #ff3d47;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.save-btn {
+  background-color: #ff3d47;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-btn .icon {
+  margin-right: 10px;
+}
+
+/* Responsive untuk Desktop */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  .icon-location img {
+    width: 200px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .save-btn {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}

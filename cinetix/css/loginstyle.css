@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Layout untuk halaman login */
+.login-page {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #161625;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Style untuk gambar di sebelah form */
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2b40;
+}
+
+.login-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Style untuk kontainer form login */
+.login-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #161625;
+}
+
+.logo {
+    font-size: 32px;
+    color: #ff3b3f;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #ffffff;
+}
+
+input[type="email"], input[type="password"] {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff3b3f;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #aaaaaa;
+}
+
+.login-button {
+    background-color: #333344;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #454561;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider span {
+    color: #666;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #666;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 2px solid #ff3b3f;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-button.google:hover {
+    background-color: rgba(255, 59, 59, 0.2);
+}
+
+.social-button.facebook:hover {
+    background-color: rgba(59, 89, 152, 0.2);
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link a {
+    color: #ff3b3f;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media query untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+}

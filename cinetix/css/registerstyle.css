@@ -1,0 +1,170 @@
+/* CSS untuk style form registrasi */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #161625;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 32px;
+    color: #ff3b3f;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #ffffff;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff3b3f;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #aaaaaa;
+}
+
+.register-button {
+    background-color: #333344;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #454561;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider span {
+    color: #666;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #666;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 2px solid #ff3b3f;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-button.google:hover {
+    background-color: rgba(255, 59, 59, 0.2);
+}
+
+.social-button.facebook:hover {
+    background-color: rgba(59, 89, 152, 0.2);
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link a {
+    color: #ff3b3f;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media query untuk layar yang lebih besar */
+@media (min-width: 768px) {
+    .register-container {
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .register-button, .social-button {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .divider span {
+        font-size: 16px;
+    }
+
+    .login-link {
+        font-size: 16px;
+    }
+}

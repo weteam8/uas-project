@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #181818;
+    color: white;
+  }
+
+  /* Header */
+  header {
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .back-btn {
+    background: #FF4747;
+    border: none;
+    border-radius: 5px;
+    padding: 2.5px 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  .back-btn:hover {
+    background-color: #ff0000;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Responsive Flexbox */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Left Section - Seat Picker */
+  .seat-picker {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .screen {
+    background-color: #4F4C7D;
+    height: 8px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  /* Kursi dibagi kiri dan kanan */
+  .seats {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spasi tengah antara kursi kiri dan kanan */
+  }
+
+  .seat-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .seat {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #FF4747;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .seat.selected {
+    background-color: #FF4747;
+  }
+
+  .seat.reserved {
+    background-color: #4F4C7D;
+    pointer-events: none;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+
+  .legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .legend span {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  /* Right Section - Date Picker & Checkout */
+  .details {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .details h3 {
+    margin-bottom: 15px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .option {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .option.active {
+    background-color: #FF4747;
+    color: #fff;
+  }
+
+  .checkout {
+    background-color: #FF4747;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Responsive for smaller screens */
+  @media (max-width: 480px) {
+    .seats {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .options {
+      flex-wrap: wrap;
+    }
+  }

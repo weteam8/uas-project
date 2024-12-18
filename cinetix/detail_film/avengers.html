@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Film</title>
+    <link rel="stylesheet" href="/css/detail_film.css" />
+    <style>
+      header {
+
+display: flex;
+align-items: center;
+padding: 10px 15px;
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+.back-btn {
+background: #FF4747;
+border: none;
+border-radius: 5px;
+padding: 2.5px 5px;
+cursor: pointer;
+font-weight: bold;
+margin-right: 15px;
+}
+
+.back-btn:hover {
+background-color: #ff0000;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #181818;
+color: white;
+padding: 20px;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+gap: 20px;
+}
+
+.poster {
+flex: 1;
+}
+
+.poster img {
+width: 100%;
+border-radius: 10px;
+}
+
+.details {
+flex: 2;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.title {
+font-size: 2rem;
+font-weight: bold;
+}
+
+.button {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background-color: #FF4747;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.button svg {
+width: 16px;
+height: 16px;
+}
+
+.tags {
+display: flex;
+gap: 10px;
+}
+
+.tag {
+padding: 5px 10px;
+background-color: #333;
+border-radius: 20px;
+font-size: 0.9rem;
+}
+
+.cast {
+display: flex;
+gap: 10px;
+}
+
+.cast img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.description {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+.booking {
+display: flex;
+justify-content: flex-start;
+}
+
+.booking .button {
+font-size: 1.2rem;
+padding: 15px 30px;
+}
+
+@media (max-width: 768px) {
+.container {
+  flex-direction: column;
+}
+
+.poster,
+.details {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.booking .button {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+}
+    </style>
+  </head>
+  <body>
+
+    <header>
+        <button class="back-btn"><a href="/dashboard.html"><img  src="image/back.png" style="width: 30px; height: 30px;"></a></button>
+    Detail Film
+  </header>
+    <div class="container">
+      <div class="poster">
+        <img src="image/splash.png" alt="Avengers EndGame" />
+      </div>
+      <div class="details">
+        <div class="title">
+          Avengers <span style="color: #e50914">EndGame</span>
+        </div>
+        <button class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14.752 11.168l-5.197-3.027A1 1 0 008 9v6a1 1 0 001.555.832l5.197-3.027a1 1 0 000-1.664z"
+            />
+          </svg>
+          <b>Trailer</b>
+        </button>
+        <div class="tags">
+          <span class="tag">Action</span>
+          <span class="tag">Science Fiction</span>
+          <span class="tag">Fantasy</span>
+        </div>
+        <div class="cast">
+          <img src="image/sam.png" alt="Actor 1" />
+          <img src="image/zoe.png" alt="Actor 2" />
+          <img src="image/stephan.png" alt="Actor 3" />
+          <img src="image/sigourney.png" alt="Actor 4" />
+        </div>
+        <div class="description">
+          Terombang-ambing di luar angkasa tanpa makanan atau air, Tony Stark
+          mengirimkan pesan kepada Pepper Potts saat pasokan oksigen mulai
+          menipis. Sementara itu, Avengers yang tersisa....
+        </div>
+        <div class="booking">
+          <button class="button"><a href="../date_seat.html"  style="text-decoration: none; color: white; font-weight: bold;">
+            Booking
+          </a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Kursi dan Tanggal</title>
+  <link rel="stylesheet" href="css/date_seat.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+        <button class="back-btn"><a href="detail_film/avengers.html"><img  src="icon/header/back.png" style="width: 30px; height: 30px;"></a></button>
+    Pilih Tanggal & Tempat Duduk
+  </header>
+
+  <div class="container">
+    <!-- Seat Picker -->
+    <div class="seat-picker">
+      <h3 style="margin-left: 10px;">Pilih Kursi</h3><br>
+      <div class="seats">
+        <!-- Kursi Kiri -->
+        <div class="seat-group" id="left-group">
+        </div>
+        <!-- Kursi Kanan -->
+        <div class="seat-group" id="right-group">
+        </div>
+      </div>
+      <div class="screen"></div>
+      <div class="legend">
+        <div><span style="background-color: #FF4747;"></span> Terpilih</div>
+        <div><span style="background-color: #4F4C7D;"></span> Disimpan</div>
+        <div><span style="border: 2px solid #FF4747;"></span> Tersedia</div>
+      </div>
+    </div>
+
+    <!-- Details and Checkout -->
+    <div class="details">
+      <h3>Pilih Hari</h3>
+      <div class="options">
+        <div class="option active" data-date="Mei 4">Mei 4</div>
+        <div class="option" data-date="Mei 1">Mei 1</div>
+        <div class="option" data-date="Mei 2">Mei 2</div>
+        <div class="option" data-date="Mei 3">Mei 3</div>
+        <div class="option" data-date="Mei 5">Mei 5</div>
+      </div>
+
+      <h3>Pilih Waktu</h3>
+      <div class="options">
+        <div class="option">8:00 pm</div>
+        <div class="option active">8:45 pm</div>
+        <div class="option">10:00 pm</div>
+      </div>
+
+      <h3>Pilih Kualitas</h3>
+      <div class="options">
+        <div class="option">2D</div>
+        <div class="option active">3D</div>
+      </div>
+
+      <div class="checkout">
+        <a href="checkout/co-avangers.html" style="text-decoration: none; color: white; font-weight: bold;">
+        Checkout
+      </a></div>
+    </div>
+  </div>
+
+  <script>
+    const leftGroup = document.getElementById('left-group');
+    const rightGroup = document.getElementById('right-group');
+
+    function generateSeats(group, totalSeats) {
+      for (let i = 0; i < totalSeats; i++) {
+        const seat = document.createElement('div');
+        seat.classList.add('seat');
+        if (i % 3 === 1) seat.classList.add('reserved'); // Simulasi kursi terisi
+        seat.addEventListener('click', () => {
+          if (!seat.classList.contains('reserved')) {
+            seat.classList.toggle('selected');
+          }
+        });
+        group.appendChild(seat);
+      }
+    }
+
+    generateSeats(leftGroup, 30); // 30 kursi kiri
+    generateSeats(rightGroup, 30); // 30 kursi kanan
+
+    // Option Selection
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        const siblings = option.parentElement.querySelectorAll('.option');
+        siblings.forEach(sib => sib.classList.remove('active'));
+        option.classList.add('active');
+      });
+    });
+
+    // Checkout
+    document.querySelector('.checkout').addEventListener('click', () => {
+      const selectedSeats = document.querySelectorAll('.seat.selected').length;
+      alert(`Anda memilih ${selectedSeats} kursi.`);
+    });
+
+    // Go Back Function
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
