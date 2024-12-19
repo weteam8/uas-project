@@ -5,5 +5,4 @@ Anggota Kelompok :
 4. (202251269) - Jafar Falikh Marzuki A
 5. (202351036) - Athaya Azriel Prasetyan   
 
-https://username.github.io/repository-name/
 https://weteam8.github.io/uas-project/cinetix/
